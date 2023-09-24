@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").on("click", function () {
+          var text = $("textarea").val();
+          var len = text.length;
+          $("p").html(
+            "The length of the text given in the text area is " + len
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <textarea></textarea>
+    <button>Calculate Length</button>
+    <p></p>
+  </body>
+</html>

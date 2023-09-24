@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div>
+      <h3>Profile</h3>
+      <div id="profile">
+        <p>Name: Bala</p>
+        <p>Email: b@mail.com</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    const user = JSON.parse(localStorage.getItem("user"));
+    const profileDiv = document.getElementById("profile");
+    const div = document.createElement("div");
+    div.innerText = user.email;
+    profileDiv.appendChild(div);
+  </script>
+</html>

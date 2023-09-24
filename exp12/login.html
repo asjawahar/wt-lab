@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <form action="" method="post">
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" />
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" />
+      <input type="submit" value="Login" />
+    </form>
+  </body>
+  <script>
+    const form = document.querySelector("form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.querySelector("#email").value;
+      const password = document.querySelector("#password").value;
+      const storedEmail = localStorage.getItem("email");
+      const storedPassword = localStorage.getItem("password");
+      if (email === storedEmail && password === storedPassword) {
+        alert("You are logged in");
+        window.location.href = "catalog.html";
+      } else {
+        alert("Error on login");
+      }
+    });
+  </script>
+</html>
